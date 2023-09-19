@@ -27,10 +27,10 @@ export default function SkillsTable() {
     { skill: "TailwindCSS", level: 80, icon: <SiTailwindcss /> },
     { skill: "JS", level: 80, icon: <SiJavascript /> },
     { skill: "TS", level: 80, icon: <SiTypescript /> },
-    { skill: "React", level: 80, icon: <SiReact /> },
-    { skill: "NextJS", level: 80, icon: <SiNextdotjs /> },
-    { skill: "SvelteKit", level: 80, icon: <SiSvelte /> },
-    { skill: "Firebase", level: 80, icon: <SiFirebase /> },
+    { skill: "React", level: 60, icon: <SiReact /> },
+    { skill: "NextJS", level: 60, icon: <SiNextdotjs /> },
+    { skill: "SvelteKit", level: 50, icon: <SiSvelte /> },
+    { skill: "Firebase", level: 50, icon: <SiFirebase /> },
   ];
 
   return (
