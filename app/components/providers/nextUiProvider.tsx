@@ -16,7 +16,7 @@ export function NextUIProvider({ children }: { children: React.ReactNode }) {
     <>
       {hydrated && (
         <Provider
-          className={`max-h-[100dvh] h-screen w-full bg-background overflow-x-hidden overflow-y-auto pt-8 pb-4  text-foreground  font-roboto text-sizing ${theme.mode} `}
+          className={`max-h-[100dvh] h-screen w-full bg-background overflow-x-hidden overflow-y-auto pt-8 text-foreground  font-roboto text-sizing ${theme.mode} `}
         >
           <Nav />
           <InnerLayout>{children}</InnerLayout>
