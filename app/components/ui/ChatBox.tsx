@@ -16,6 +16,7 @@ import {
   serverTimestamp,
   orderBy,
   limitToLast,
+  Timestamp,
 } from "firebase/firestore";
 import { useEffect, useRef, useState } from "react";
 
@@ -31,7 +32,8 @@ export default function ChatBox() {
   const chat = useChatState();
   const date = new Date();
   const commentsScrollable = useRef<HTMLDivElement>(null);
-  const [comments, setComments] = useState<DocumentData>([]);
+  const [comments, setComments] = useState<DocumentData[]>([]);
+
   const comment = async (data: FieldValues) => {
     if (data.comment.trim() === "") {
       setValue("comment", null);
@@ -58,22 +60,27 @@ export default function ChatBox() {
     reset();
   };
   const getComments = () => {
-    onSnapshot(
+    const get = onSnapshot(
       query(
         collection(firestore, "comments"),
         orderBy("createdAt", "asc"),
         limitToLast(10)
       ),
       (data) => {
-        setComments(data.docs.map((comment) => comment.data()));
+        setComments(
+          data.docs.map((comment) => ({
+            time: comment.data().createdAt.toDate().toLocaleDateString(),
+            ...comment.data(),
+          }))
+        );
       }
     );
+
+    return get;
   };
 
   useEffect(() => {
     getComments();
-
-    if (!comments) return;
   }, []);
   return (
     <motion.div
@@ -116,7 +123,7 @@ export default function ChatBox() {
                     <p className="text-xs text-primary italic">
                       {comment.name.trim() === "" ? "Anonymous" : comment.name}{" "}
                       {comment.localId === chat.localId && "(You) "}
-                      {comment.createdAt.toDate().toLocaleDateString()}
+                      {comment.time}
                     </p>
                     <p>{comment.comment}</p>
                   </motion.div>
