@@ -1,4 +1,8 @@
 import Form from "../components/contact/Form";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Connect | John Rod Dondoyano",
+};
 export default function Connect() {
   return (
     <>
