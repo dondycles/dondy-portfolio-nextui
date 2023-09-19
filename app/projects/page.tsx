@@ -68,7 +68,7 @@ export default function Projects() {
               src={project.img}
               fill
             />
-            <CardFooter className="absolute bg-background bottom-0 z-10 flex flex-row items-end text-foreground">
+            <CardFooter className="absolute bg-background bottom-0 z-10 flex flex-col items-start text-foreground gap-4">
               <div className="flex flex-grow gap-2 items-center">
                 <div className="flex flex-col gap-2">
                   <h1 className="font-black text-2xl text-primary">
@@ -79,8 +79,9 @@ export default function Projects() {
                     {project.badges.map((chip) => {
                       return (
                         <Chip
-                          variant="solid"
-                          className=" text-sizing bg-primary text-white"
+                          variant="bordered"
+                          color="primary"
+                          className=" text-sizing bg-transparent text-foreground"
                         >
                           {chip}
                         </Chip>
@@ -93,10 +94,9 @@ export default function Projects() {
                 as={Link}
                 href={project.href}
                 target="_blank"
-                radius="full"
                 variant="solid"
                 color="primary"
-                className="text-white"
+                className="text-white w-full"
               >
                 Visit
               </Button>

@@ -43,6 +43,7 @@ export default function Footer() {
         return (
           <Button
             isIconOnly
+            radius="full"
             color="primary"
             variant="shadow"
             as={Link}
