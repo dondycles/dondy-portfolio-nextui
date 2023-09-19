@@ -250,7 +250,6 @@ export default function ChatBox() {
         >
           {!chat.name && (
             <Input
-              autoFocus
               {...register("name")}
               variant="bordered"
               placeholder={"Name (Optional)"}
@@ -260,7 +259,6 @@ export default function ChatBox() {
 
           <div className="flex flex-row gap-4">
             <Input
-              autoFocus
               {...register("comment", {
                 required: "A comment must not be empty.",
               })}
