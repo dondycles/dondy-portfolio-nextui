@@ -11,10 +11,10 @@ const roboto = Poppins({
 
 export const metadata: Metadata = {
   title: "John Rod Dondoyano | Portfolio",
-  description: "A porfolio for professional purposes.",
+  description: "A portfolio for professional purposes.",
   twitter: {
     title: "John Rod Dondoyano | Portfolio",
-    description: "A porfolio for professional purposes.",
+    description: "A portfolio for professional purposes.",
     card: "summary_large_image",
     creator: "@dondycles",
     images: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "John Rod Dondoyano | Portfolio",
-    description: "A porfolio for professional purposes.",
+    description: "A portfolio for professional purposes.",
     type: "website",
     siteName: "John Rod Dondoyano | Portfolio",
     url: "johnrod.dev",
