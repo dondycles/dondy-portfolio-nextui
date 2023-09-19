@@ -15,7 +15,7 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 pt-8 flex justify-center gap-4">
+    <nav className="fixed top-0 left-0 right-0 pt-8 flex justify-center gap-4 z-20">
       <Button
         onClick={() => {
           chat.toggleChat(!chat.isOpen);
@@ -32,6 +32,7 @@ export default function Nav() {
         {pages.map((page) => {
           return (
             <Button
+              key={page.name}
               as={Link}
               href={page.href}
               className={`text-xs font-black text-foreground last:rounded-r-full first:rounded-l-full ${

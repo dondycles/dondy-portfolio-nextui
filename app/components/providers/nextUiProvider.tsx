@@ -1,13 +1,15 @@
 "use client";
 import { NextUIProvider as Provider } from "@nextui-org/react";
 import Nav from "../ui/Nav";
-import { useThemeState } from "@/store";
+import { useChatState, useThemeState } from "@/store";
 import InnerLayout from "../ui/InnerLayout";
 import { useEffect, useState } from "react";
-import Footer from "../ui/Footer";
+import ChatBox from "../ui/ChatBox";
+import { AnimatePresence } from "framer-motion";
 
 export function NextUIProvider({ children }: { children: React.ReactNode }) {
   const theme = useThemeState();
+  const chat = useChatState();
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     setHydrated(true);
@@ -20,6 +22,7 @@ export function NextUIProvider({ children }: { children: React.ReactNode }) {
         >
           <Nav />
           <InnerLayout>{children}</InnerLayout>
+          <AnimatePresence>{chat.isOpen && <ChatBox />}</AnimatePresence>
         </Provider>
       )}
     </>

@@ -42,6 +42,7 @@ export default function Footer() {
       {accounts.map((account) => {
         return (
           <Button
+            key={account.name}
             isIconOnly
             radius="full"
             color="primary"
