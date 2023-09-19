@@ -15,6 +15,9 @@ const config: Config = {
       },
     },
   },
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   darkMode: "class",
   plugins: [
     nextui({
