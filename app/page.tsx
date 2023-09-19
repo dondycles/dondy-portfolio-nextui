@@ -12,7 +12,9 @@ export default function Home() {
           alt="Graduation Pic"
         />
         <div>
-          <h1 className="font-black">John Rod Dondoyano</h1>
+          <h1 className="font-black text-primary text-base">
+            John Rod Dondoyano
+          </h1>
           <p>Web Developer | Pianist</p>
         </div>
       </header>
