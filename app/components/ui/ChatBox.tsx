@@ -72,6 +72,8 @@ export default function ChatBox() {
 
   useEffect(() => {
     getComments();
+
+    if (!comments) return;
   }, []);
   return (
     <motion.div
