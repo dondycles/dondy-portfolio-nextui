@@ -1,9 +1,10 @@
-import { Card, CardFooter } from "@nextui-org/card";
-import { Button } from "@nextui-org/button";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { Chip } from "@nextui-org/chip";
+import { Button } from "@nextui-org/button";
 import { Metadata } from "next";
+import { Card, CardFooter } from "@nextui-org/card";
+
 export const metadata: Metadata = {
   title: "Projects | John Rod Dondoyano",
 };
@@ -57,7 +58,6 @@ export default function Projects() {
       badges: ["NextJS", "Tailwind", "TypeScript"],
     },
   ];
-
   return (
     <>
       {projects.map((project) => {
