@@ -11,6 +11,13 @@ export const metadata: Metadata = {
 export default function Projects() {
   const projects = [
     {
+      name: "HeroeZ! Heroes in 6th Dimension.",
+      description: "Anime inspired website for showcasing an NFT Project.",
+      img: "/images/projects/heroez.png",
+      href: "https://heroezofficial.com/",
+      badges: ["NextJS", "NextUI", "Zustand", "Tailwind", "TypeScript"],
+    },
+    {
       name: "Sveltered",
       description:
         "E-Commerce Website I created with the help of developedbyed's course.",
