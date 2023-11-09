@@ -13,6 +13,9 @@ const config: Config = {
       fontFamily: {
         roboto: ["var(--font-roboto)"],
       },
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fit, minmax(300px,1fr))",
+      },
     },
   },
   future: {

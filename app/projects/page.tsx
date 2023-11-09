@@ -50,12 +50,12 @@ export default function Projects() {
       badges: ["SvelteKit", "Tailwind", "TypeScript", "Firebase", "EmailJS"],
     },
     {
-      name: "Moneyger",
+      name: "Moneytor",
       description:
         "Web application you can use for managing and keeping track of your personal money.",
-      img: "/images/projects/moneyger.jpg",
-      href: "https://moneyger-v2.vercel.app/",
-      badges: ["NextJS", "Tailwind", "Firebase", "TypeScript"],
+      img: "/images/projects/moneytor.png",
+      href: "https://moneytor-ph.vercel.app",
+      badges: ["NextJS", , "NextUI", "Tailwind", "Firebase", "TypeScript"],
     },
     {
       name: "Wheel Of Pearl",
@@ -66,13 +66,10 @@ export default function Projects() {
     },
   ];
   return (
-    <>
+    <div className="grid lg:grid-cols-2  gap-4">
       {projects.map((project) => {
         return (
-          <Card
-            shadow="md"
-            className="w-full min-h-[400px] col-span-12 sm:col-span-7 relative"
-          >
+          <Card shadow="md" className=" min-h-[500px]">
             <Image
               alt="Relaxing app background"
               className="z-0 w-full h-full object-cover rounded-2xl"
@@ -115,6 +112,6 @@ export default function Projects() {
           </Card>
         );
       })}
-    </>
+    </div>
   );
 }
